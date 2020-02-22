@@ -26,6 +26,6 @@ steps:
     azureSubscription: 'Azure subscription 1(93ee44a9-3d8e-4d43-bb72-ae359d8182cb)'
     appType: 'webApp'
     WebAppName: 'hangmantesttdd'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/dist/hanman-tdd'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/dist/hangman-tdd'
 
 
