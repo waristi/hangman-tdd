@@ -8,5 +8,43 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="letters-buttons">
+      <button *ngFor="let letter of letters" class="btn btn-primary"> {{ letter }} </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col text-center">
+      <h1>{{hiddenWord}}</h1>
+  </div>
+</div>
+
+<img src="assets/img/{{ tries }}.png" alt="hangman-img" class="hangman-img">
+
+<div class="row" *ngIf="!win && !lost">
+  <div class="letters-buttons">
+      <button (click)="verify( letter )" *ngFor="let letter of letters" class="btn btn-primary"> {{ letter }} </button>
+  </div>
+</div>
+
+
+<div *ngIf="lost" class="row">
+  <div class="gameover">
+      <h1> HAS PERDIDO :( </h1>
+      <h4> {{ word }} </h4>
+  </div>
+</div>
+
+<div *ngIf="win" class="row">
+  <div class="win">
+      <h1> ¡FELICIDADES HAS GANADO! </h1>
+      <h4> :) </h4>
+  </div>
+</div>
+
+
+
+
 
 <router-outlet></router-outlet>
