@@ -23,10 +23,8 @@ steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
-    azureSubscription: 'Azure subscription 1(1)(93ee44a9-3d8e-4d43-bb72-ae359d8182cb)'
-    appType: 'webAppLinux'
-    WebAppName: 'hangman-tdd-devops'
+    appType: 'webApp'
+    WebAppName: 'hangmantesttdd'
     packageForLinux: '$(System.DefaultWorkingDirectory)/dist/hangman-tdd'
-    RuntimeStack: 'NODE|10.14'
 
 
