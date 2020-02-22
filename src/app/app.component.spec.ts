@@ -13,12 +13,10 @@ describe('AppComponent', () => {
       ],
     }).compileComponents();
   }));
-
   it('should show the welcome message',() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('.welcome span').textContent).toContain('Bienvenido al HangMan');
   });
-  
 });
