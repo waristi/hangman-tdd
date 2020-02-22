@@ -1,4 +1,11 @@
 # Node.js with Angular
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(93ee44a9-3d8e-4d43-bb72-ae359d8182cb)'
+    appType: 'webApp'
+    WebAppName: 'hangman-tdd-devops'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/dist/hangman-tdd'
 # Build a Node.js project that uses Angular.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
